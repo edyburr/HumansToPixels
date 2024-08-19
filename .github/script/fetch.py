@@ -4,7 +4,7 @@ import json
 conn = http.client.HTTPSConnection("get-population.p.rapidapi.com")
 
 headers = {
-    'x-rapidapi-key': "RAPIDAPI_KEY",
+    'x-rapidapi-key': "secret.RAPIDAPI_KEY",
     'x-rapidapi-host': "get-population.p.rapidapi.com"
 }
 
