@@ -25,7 +25,7 @@ jobs:
 
     - name: Run API fetch script
       run: |
-        python script/fetch.py
+        python .github/script/fetch.py
 
     - name: Commit and push updated data
       uses: EndBug/add-and-commit@v9
