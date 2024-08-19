@@ -30,7 +30,7 @@ jobs:
     - name: Commit and push updated data
       uses: EndBug/add-and-commit@v9
       with:
-        add: 'data/parsed_data.json'
+        add: 'data/population.json'
         message: 'Update API data'
         author_name: 'GitHub Actions'
         author_email: 'actions@github.com'
