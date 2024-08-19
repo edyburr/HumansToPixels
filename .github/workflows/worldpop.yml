@@ -1,0 +1,59 @@
+name: Update Population Data
+
+on:
+  schedule:
+    # Runs daily at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install requests
+
+    - name: Fetch API data
+      id: fetch_api
+      run: |
+        import http.client
+        import json
+
+        conn = http.client.HTTPSConnection("get-population.p.rapidapi.com")
+
+        headers = {
+            'x-rapidapi-key': "secret.RAPIDAPI_KEY",
+            'x-rapidapi-host': "get-population.p.rapidapi.com"
+        }
+
+        conn.request("GET", "/population", headers=headers)
+
+        res = conn.getresponse()
+        data = res.read()
+
+        # Decode and parse the JSON response
+        parsed_data = json.loads(data.decode("utf-8"))
+
+        # Write the parsed JSON data to a file
+        with open('data/parsed_data.json', 'w') as f:
+            json.dump(parsed_data, f, indent=2)
+
+        print("API data fetched and saved.")
+
+    - name: Commit and push updated data
+      uses: EndBug/add-and-commit@v9
+      with:
+        add: 'data/parsed_data.json'
+        message: 'Update API data'
+        author_name: 'GitHub Actions'
+        author_email: 'actions@github.com'
