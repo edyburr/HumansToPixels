@@ -45,7 +45,7 @@ jobs:
         parsed_data = json.loads(data.decode("utf-8"))
 
         # Write the parsed JSON data to a file
-        with open('data/parsed_data.json', 'w') as f:
+        with open('data/population.json', 'w') as f:
             json.dump(parsed_data, f, indent=2)
 
         print("API data fetched and saved.")
