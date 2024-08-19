@@ -13,14 +13,17 @@ conn.request("GET", "/population", headers=headers)
 res = conn.getresponse()
 data = res.read()
 
-# Decode and load the JSON data
+# Decode and print the JSON data
 decoded_data = data.decode("utf-8")
+print("Response Data:", decoded_data)
+
+# Load the JSON data
 population_data = json.loads(decoded_data)
 
 # Prepare the JSON data to be saved
 world_population = {
-    "count": population_data["body"]["world_population"],
-    "readable_format": f"{population_data['body']['world_population']:,}"
+    "count": population_data["count"],
+    "readable_format": population_data["readable_format"]
 }
 
 # Save the data to worldpop.json
