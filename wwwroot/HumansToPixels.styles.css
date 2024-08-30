@@ -58,9 +58,8 @@ nav[b-jfh76xakv4] {
 }
 
     .break > p[b-jfh76xakv4] {
-        position: fixed;
-        top: 50%;
         text-align: center;
+        padding: 5rem 1rem 5rem 1rem;
     }
 
 /* Footer */
@@ -69,7 +68,7 @@ footer[b-jfh76xakv4] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1150px;
+    max-width: 1150px;
     font-size: 14px;
     margin: 1rem 0 1rem 0;
 }
