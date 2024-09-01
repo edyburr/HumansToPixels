@@ -6,6 +6,7 @@
     --gray: #B1B2B5;
     --white: #FFFFFF;
     font-size: 15px;
+    zoom: 1;
 }
 
 /* latin-ext */
@@ -28,7 +29,7 @@
 }
 
 html {
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,5 +90,17 @@ p {
 
     87.5% {
         box-shadow: 19px -19px 0 0px, 38px -19px 0 5px, 57px -19px 0 0px, 19px 0 0 0px, 38px 0 0 5px, 57px 0 0 0px, 19px 19px 0 5px, 38px 19px 0 0px, 57px 19px 0 0px
+    }
+}
+
+@media(min-width: 1660px) {
+    :root {
+        zoom: 1.35;
+    }
+}
+
+@media (min-width: 1920px) {
+    :root {
+        zoom: 1.5;
     }
 }
