@@ -5,7 +5,6 @@
     --ash: #2F2F2F;
     --gray: #B1B2B5;
     --white: #FFFFFF;
-    zoom: 1;
     font-size: 15px;
     zoom: 1;
 }
@@ -40,7 +39,7 @@ body {
     font-family: 'Outfit', sans-serif;
     color: var(--white);
     background-color: var(--obsidian);
-    max-width: 1150px;
+    width: 1150px;
     margin: 0;
 }
 
@@ -96,11 +95,7 @@ p {
 
 @media(min-width: 1660px) {
     :root {
-<<<<<<< Updated upstream
         zoom: 1.35;
-=======
-        zoom: 1.25;
->>>>>>> Stashed changes
     }
 }
 
@@ -108,8 +103,4 @@ p {
     :root {
         zoom: 1.5;
     }
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes
