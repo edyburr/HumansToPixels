@@ -301,7 +301,7 @@ main[b-7htd2o503o] {
         height: 100%;
         background: linear-gradient(0deg, rgba(101, 214, 139, 0) 0%, rgba(101, 214, 139, 0.4) 50%, rgba(101, 214, 139, 0) 100%);
         transform: translateX(-100%) translateY(50%) rotate(45deg);
-        animation: glint-b-7htd2o503o 5s infinite;
+        animation: glint-b-7htd2o503o 2s infinite;
     }
 
 @keyframes glint-b-7htd2o503o {
